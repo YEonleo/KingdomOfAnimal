@@ -57,6 +57,9 @@ ${PROJECT}
 1. 데이터 폴더 준비
    - data 폴더내에 업로드된 데이터파일을 추가 train.jsonl,val.jsonl,test.jsonl 은 EA폴더내의 data에
    - 가젤왕.jsonl은 ENSEMBLE/ 폴더 안에
-3. ENSEMBLE 파일에 업로드된 '가젤왕' 파일 추가
-4. 맨앞의 폴더로 돌아가 bash inf.sh를 실행후 inference를 실행
-5. ENSEMBLE폴더 안에 '최종제출.jsonl' 형태로 결과가 출력
+   - https://drive.google.com/file/d/1_sbvG2bXVfkU_sDk_5XaqERthDeOlB1h/view?usp=sharing
+2. EA안에 results폴더 추가
+   - https://drive.google.com/file/d/1GzZ_mg0fOBJCspA0aUJ9HpILSA_0T_-e/view?usp=sharing
+4. ENSEMBLE 파일에 업로드된 '가젤왕' 파일 추가
+5. 맨앞의 폴더로 돌아가 bash inf.sh를 실행후 inference를 실행
+6. ENSEMBLE폴더 안에 '최종제출.jsonl' 형태로 결과가 출력
