@@ -24,7 +24,7 @@ ${PROJECT}
 │   ├── inference_logitslora.py
 │   ├── run.py
 │   └── runllm.py
-├── ENSEMBLE/
+├── Ensemble/
 │   └── 가젤왕.jsonl
 ├── inf.sh
 └── requirements.yaml
