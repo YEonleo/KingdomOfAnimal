@@ -54,7 +54,8 @@ ${PROJECT}
 ### 추론 process
 
 1. 데이터 폴더 준비
-   - data 폴더내에 업로드된 데이터파일을 추가
+   - data 폴더내에 업로드된 데이터파일을 추가 train.jsonl,val.jsonl,test.jsonl 은 EA폴더내의 data에
+   - 가젤왕.jsonl은 ENSEMBLE/ 폴더 안에
 3. ENSEMBLE 파일에 업로드된 '가젤왕' 파일 추가
 4. 맨앞의 폴더로 돌아가 bash inf.sh를 실행후 inference를 실행
 5. ENSEMBLE폴더 안에 '최종제출.jsonl' 형태로 결과가 출력
