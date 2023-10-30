@@ -25,6 +25,7 @@ ${PROJECT}
 │   ├── run.py
 │   └── runllm.py
 ├── ENSEMBLE/
+│   └── 가젤왕.jsonl
 └── inf.sh
 ```
 
