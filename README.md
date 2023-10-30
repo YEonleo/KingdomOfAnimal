@@ -26,7 +26,8 @@ ${PROJECT}
 │   └── runllm.py
 ├── ENSEMBLE/
 │   └── 가젤왕.jsonl
-└── inf.sh
+├── inf.sh
+└── requirements.yaml
 ```
 
 - EA
@@ -61,5 +62,7 @@ ${PROJECT}
 2. EA안에 results폴더 추가
    - https://drive.google.com/file/d/1GzZ_mg0fOBJCspA0aUJ9HpILSA_0T_-e/view?usp=sharing
 4. ENSEMBLE 파일에 업로드된 '가젤왕' 파일 추가
-5. 맨앞의 폴더로 돌아가 bash inf.sh를 실행후 inference를 실행
-6. ENSEMBLE폴더 안에 '최종제출.jsonl' 형태로 결과가 출력
+5. 가상환경인 requiremnets,yaml을 이용하여 가상환경 setting
+   - conda env create -f requirements.yaml를 통해 생성된 가상환경 testsub를 통해 검증
+7. 맨앞의 폴더로 돌아가 bash inf.sh를 실행후 inference를 실행
+8. ENSEMBLE폴더 안에 '최종제출.jsonl' 형태로 결과가 출력
