@@ -56,12 +56,12 @@ ${PROJECT}
 ### 추론 process
 
 1. 데이터 폴더 준비
-   - data 폴더내에 업로드된 데이터파일을 추가 train.jsonl,val.jsonl,test.jsonl 은 EA폴더내의 data에
+   - data 폴더내에 업로드된 데이터파일을 추가 train.jsonl,val.jsonl,test.jsonl 은 EA폴더내의 data에 아래와같이 넣어주시길 바랍니다
    - ![제목 없음](https://github.com/YEonleo/KingdomOfAnimal/assets/90837906/cc244ad9-4c95-464e-8b07-1b74daab412d)
-   - 가젤왕.jsonl은 ENSEMBLE/ 폴더 안에
+   - 가젤왕.jsonl은 ENSEMBLE/ 폴더 안에 아래와같이 넣어주시길 바랍니다
    - <img width="296" alt="스크린샷 2023-10-31 오후 12 49 56" src="https://github.com/YEonleo/KingdomOfAnimal/assets/90837906/55d06123-947d-4d1a-8317-5e2733321e83">
    - https://drive.google.com/file/d/1_sbvG2bXVfkU_sDk_5XaqERthDeOlB1h/view?usp=sharing
-2. EA안에 results폴더 추가
+2. EA안에 results폴더 를 아래와같이 넣어주시길 바랍니다
    - https://drive.google.com/file/d/1GzZ_mg0fOBJCspA0aUJ9HpILSA_0T_-e/view?usp=sharing
    - <img width="318" alt="스크린샷 2023-10-31 오후 12 48 54" src="https://github.com/YEonleo/KingdomOfAnimal/assets/90837906/07950cc2-86bf-4291-a78b-0dc5902caad8">
 3. 가상환경인 requiremnets,yaml을 이용하여 가상환경 setting
