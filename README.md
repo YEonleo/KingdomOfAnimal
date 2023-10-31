@@ -65,7 +65,6 @@ ${PROJECT}
 4. ENSEMBLE 파일에 업로드된 '가젤왕' 파일 추가
    - <img width="296" alt="스크린샷 2023-10-31 오후 12 49 56" src="https://github.com/YEonleo/KingdomOfAnimal/assets/90837906/55d06123-947d-4d1a-8317-5e2733321e83">
 5. 가상환경인 requiremnets,yaml을 이용하여 가상환경 setting
-   ```conda env create -f requirements.yaml```
-   를 통해 생성된 가상환경 testsub를 통해 검증
+   - ```conda env create -f requirements.yaml```를 통해 생성된 가상환경 testsub를 통해 검증
 7. 맨앞의 폴더로 돌아가 bash inf.sh를 실행후 inference를 실행
 8. ENSEMBLE폴더 안에 '최종제출.jsonl' 형태로 결과가 출력
