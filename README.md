@@ -4,33 +4,36 @@
 
 ### 프로젝트 구조
 
+
+
+```
 ${PROJECT}
 ├── EA/
-│ ├── data/
-│ │ ├── train.jsonl
-│ │ ├── dev.jsonl
-│ │ └── test.jsonl
-│ ├── models/
-│ │ ├── EnhancedPoolingModel2.py
-│ │ └── RealAttention5.py
-│ ├── modules/
-│ │ ├── arg_parser.py
-│ │ ├── dataset_preprocessor.py
-│ │ ├── logger_module.py
-│ │ └── utils.py
-│ └── results/
-│ ├── ensemble.py
-│ ├── inference_logits.py
-│ ├── inference_logitslora.py
-│ ├── run.py
-│ └── runllm.py
+│   ├── data/
+│   │   ├── train.jsonl
+│   │   ├── dev.jsonl
+│   │   └── test.jsonl
+│   ├── models/
+│   │   ├── EnhancedPoolingModel2.py
+│   │   └── RealAttention5.py
+│   ├── modules/
+│   │   ├── arg_parser.py
+│   │   ├── dataset_preprocessor.py
+│   │   ├── logger_module.py
+│   │   └── utils.py
+│   └── results/
+│   ├── ensemble.py
+│   ├── inference_logits.py
+│   ├── inference_logitslora.py
+│   ├── run.py
+│   └── runllm.py
 ├── Ensemble/
-│ └── 가젤왕.jsonl
+│   └── 가젤왕.jsonl
 ├── inf.sh
 └── requirements.yaml
+```
 
-markdown
-Copy code
+
 
 - **EA 폴더**: 모델 학습 및 추론에 필요한 모든 파일이 포함됩니다.
   - `data`: 학습, 검증, 테스트 데이터셋이 포함됩니다.
