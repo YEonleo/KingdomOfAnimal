@@ -1,70 +1,56 @@
-# KingdomOfAnimal
-2023 모두의 말뭉치 EA 감정분석 동물의 왕국
+# KingdomOfAnimal: 2023 모두의 말뭉치 EA 감정분석 동물의 왕국
 
-### 코드 구조
+동물의 왕국 프로젝트는 2023 모두의 말뭉치를 사용한 감정 분석에 초점을 맞춘 프로젝트입니다. 본 프로젝트는 학습 데이터를 기반으로 감정 분석 모델을 학습시키고, 검증 및 테스트 데이터를 통해 모델의 성능을 평가. 이를 위해 Mean, Max Pooling과 특정 단어 주위의 N-gram을 Attention으로 분석하는 두 가지 방식의 모델을 사용.
 
-```
+### 프로젝트 구조
+
 ${PROJECT}
 ├── EA/
-│   ├── data/
-│   │   ├── train.jsonl
-│   │   ├── dev.jsonl
-│   │   └── test.jsonl
-│   ├── models/
-│   │   ├── EnhancedPoolingModel2.py
-│   │   └── RealAttention5.py
-│   ├── modules/
-│   │   ├── arg_parser.py
-│   │   ├── dataset_preprocessor.py
-│   │   ├── logger_module.py
-│   │   └── utils.py
-│   └── results/
-│   ├── ensemble.py
-│   ├── inference_logits.py
-│   ├── inference_logitslora.py
-│   ├── run.py
-│   └── runllm.py
+│ ├── data/
+│ │ ├── train.jsonl
+│ │ ├── dev.jsonl
+│ │ └── test.jsonl
+│ ├── models/
+│ │ ├── EnhancedPoolingModel2.py
+│ │ └── RealAttention5.py
+│ ├── modules/
+│ │ ├── arg_parser.py
+│ │ ├── dataset_preprocessor.py
+│ │ ├── logger_module.py
+│ │ └── utils.py
+│ └── results/
+│ ├── ensemble.py
+│ ├── inference_logits.py
+│ ├── inference_logitslora.py
+│ ├── run.py
+│ └── runllm.py
 ├── Ensemble/
-│   └── 가젤왕.jsonl
+│ └── 가젤왕.jsonl
 ├── inf.sh
 └── requirements.yaml
-```
 
-- EA
-    - data
-      - train.jsonl: 학습 데이터
-      - dev.jsonl: 검증 데이터
-      - test.jsonl: 추론 데이터
-    - models
-      - EnhancedPoolingModel2.py: Mean, Max Pooling만 사용한 모델 class
-      - RealAttention5.py: Prompt형태로 특정단어 주위의 단어 N_gram을 attention해서 이용한 모델 class
-    - modules
-      - arg_parser.py: parser 인자 저장 class
-      - dataset_preprocessor.py: 데이터 전처리 class
-      - logger_module.py: logger module class
-      - utils.py: 나머지 전체 utils 저장 class
-  - run.py: Encoder 기반 모델 학습 코드
-  - runllm.py: LLM 모델 학습 코드
-  - inference_logits.py: Encoder 기반 모델 추론 코드
-  - inference_logitslora.py: LLM 모델 추론 코드
-  - ensemble.py: 최종 logits 기반 앙상블 코드
-- ENSEMBLE
+markdown
+Copy code
 
+- **EA 폴더**: 모델 학습 및 추론에 필요한 모든 파일이 포함됩니다.
+  - `data`: 학습, 검증, 테스트 데이터셋이 포함됩니다.
+  - `models`: 학습에 사용되는 모델 클래스 파일이 포함됩니다.
+  - `modules`: 데이터 전처리, 로깅 등에 사용되는 유틸리티 클래스 파일이 포함됩니다.
+  - `results`: 추론 결과를 저장하는 폴더입니다.
+- **Ensemble 폴더**: 앙상블을 위한 추가 데이터셋이 포함됩니다.
 
----
+### 추론 과정
 
-### 추론 process
+1. **데이터 준비**:
+   - `EA/data` 폴더에 `train.jsonl`, `dev.jsonl`, `test.jsonl`을 준비합니다.
+   - `Ensemble` 폴더에 `가젤왕.jsonl`을 위치시킵니다.
 
-1. 데이터 폴더 준비
-   - data 폴더내에 업로드된 데이터파일을 추가 train.jsonl,val.jsonl,test.jsonl 은 EA폴더내의 data에 아래와같이 넣어주시길 바랍니다
-   - ![제목 없음](https://github.com/YEonleo/KingdomOfAnimal/assets/90837906/cc244ad9-4c95-464e-8b07-1b74daab412d)
-   - 가젤왕.jsonl은 ENSEMBLE/ 폴더 안에 아래와같이 넣어주시길 바랍니다
-   - <img width="296" alt="스크린샷 2023-10-31 오후 12 49 56" src="https://github.com/YEonleo/KingdomOfAnimal/assets/90837906/55d06123-947d-4d1a-8317-5e2733321e83">
-   - https://drive.google.com/file/d/1_sbvG2bXVfkU_sDk_5XaqERthDeOlB1h/view?usp=sharing
-2. EA안에 results폴더 를 아래와같이 넣어주시길 바랍니다
-   - https://drive.google.com/file/d/1GzZ_mg0fOBJCspA0aUJ9HpILSA_0T_-e/view?usp=sharing
-   - <img width="318" alt="스크린샷 2023-10-31 오후 12 48 54" src="https://github.com/YEonleo/KingdomOfAnimal/assets/90837906/07950cc2-86bf-4291-a78b-0dc5902caad8">
-3. 가상환경인 requiremnets,yaml을 이용하여 가상환경 setting
-   - ```conda env create -f requirements.yaml```를 통해 생성된 가상환경 testsub를 통해 검증
-4. 맨앞의 폴더로 돌아가 bash inf.sh를 실행후 inference를 실행
-5. ENSEMBLE폴더 안에 '최종제출.jsonl' 형태로 결과가 출력
+2. **가상 환경 설정**:
+   - `requirements.yaml` 파일을 이용하여 가상 환경을 설정합니다.
+   - ```conda env create -f requirements.yaml``` 명령어로 가상 환경을 생성합니다.
+
+3. **추론 실행**:
+   - 프로젝트의 루트 디렉토리에서 `bash inf.sh`를 실행하여 추론을 시작합니다.
+
+4. **결과 확인**:
+   - `Ensemble` 폴더 안에 `최종제출.jsonl` 형태로 결과가 출력됩니다.
